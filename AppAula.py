@@ -1,10 +1,7 @@
 #O código só roda se tiver salvo (Ctrl + s)
-import csv
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-
 "### Salve"
 
 # ou coloca dentro do write
@@ -65,3 +62,13 @@ if st.button('Adiciona número'):
     
 st.line_chart( st.session_state["lista"] )
 st.session_state
+
+
+# Fazer uma tree
+#df = pd.read_csv(r"C:\Users\guico\OneDrive\Documentos\UFPR\Matérias\Mineração de Dados\Datasets\producao_grega.csv")
+
+#Requisições na internet
+
+import requests as rq
+
+respostas = rq.get("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL")
