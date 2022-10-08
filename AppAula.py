@@ -1,7 +1,6 @@
 #O código só roda se tiver salvo (Ctrl + s)
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 "### Salve"
 
 # ou coloca dentro do write
@@ -26,11 +25,7 @@ st.write(df)
 numero = int(st.text_input('Número de intervalos do histograma',0))
 st.write('O tamanho de intervalos é', numero)
 
-if numero>0:
-    fig,ax = plt.subplots(1,1)
-    ax.hist(np.random.normal(20,2,100),bins = numero)
-    fig
-    plt.show()
+
 
 
 # Widgets
